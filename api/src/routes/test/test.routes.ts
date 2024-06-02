@@ -1,13 +1,23 @@
 import express, { IRouter, Request, Response } from "express";
 import axios from "axios";
-import requestIp from "request-ip";
 import { envs } from "../../config/plugin/env-var";
 
 const route: IRouter = express.Router();
 
+const getAddressIp = async () => {
+    try {
+        const response = await axios.get('https://api.ipify.org?format=json');
+        return response.data.ip; // Retorna solo la IP, no todo el objeto de respuesta
+    } catch (error) {
+        console.error(`Error fetching IP address: ${error}`);
+        return null;
+    }
+}
+
 // Función para obtener información de geolocalización desde ipdata.co
-async function getGeoInfo(ip: string, apiKey: string) {
-    const url = `https://api.ipdata.co/${ip}?api-key=${apiKey}`;
+const getGeoInfo = async (apiKey: string) => {
+    const address = await getAddressIp(); // Espera a que getAddressIp() se resuelva
+    const url = `https://api.ipdata.co/${address}?api-key=${apiKey}`;
     try {
         const response = await axios.get(url);
         return response.data;
@@ -18,17 +28,11 @@ async function getGeoInfo(ip: string, apiKey: string) {
 }
 
 route.get('/test', async (req: Request, res: Response) => {
-    const clientIp = requestIp.getClientIp(req);
-
-    // Usar una IP pública para pruebas si la IP es de loopback
-    const ipToLookup:any = (clientIp === '::1' || clientIp === '127.0.0.1') ? '8.8.8.8' : clientIp;
-
-    // Reemplaza 'TU_API_KEY_DE_IPDATA_CO' con tu API key obtenida de ipdata.co
-    const apiKey = envs.IPDATA_KEY
-    const geoInfo = await getGeoInfo(ipToLookup, apiKey);
+    const apiKey = envs.IPDATA_KEY;
+    const geoInfo = await getGeoInfo(apiKey);
 
     res.json({
-        ip: clientIp,
+        ip: await getAddressIp(), // Espera a que getAddressIp() se resuelva
         geo: geoInfo || 'No se pudo determinar la ubicación de la IP'
     });
 });
