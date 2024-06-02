@@ -17,5 +17,6 @@ export const envs = {
   CLIENT_ID: env.get("CLIENT_ID").required().asString(),
   CLIENT_SECRET: env.get("CLIENT_SECRET").required().asString(),
 
-  SESION_SECRET: env.get("SESION_SECRET").required().asString()
+  SESION_SECRET: env.get("SESION_SECRET").required().asString(),
+  IPDATA_KEY: env.get("IPDATA_KEY").required().asString()
 };

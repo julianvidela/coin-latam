@@ -22,7 +22,6 @@ router.get(
       <h4>Your email: ${user.emails[0].value}</h4>
       <a href="/logout">Logout</a>
     `);
-
   },
 );
 

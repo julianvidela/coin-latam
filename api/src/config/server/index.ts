@@ -4,16 +4,16 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 import path from "path";
 import cors from "cors";
-import { IRoute } from "express-serve-static-core";
 import session from 'express-session';
 import { envs } from "../plugin/env-var";
 import { Strategy as GoogleStrategy, Profile } from 'passport-google-oauth20';
 import passport from "passport"
-import mongoose, { Document, Model, Schema } from 'mongoose';
 import { IUser, UserModel as User } from "../../database/mongo/model/User.model"
 import route from "../../routes/index.routes";
 import { v4 as uuid } from "uuid"; 
- 
+import requestIp from 'request-ip';
+
+
 
 
 
@@ -25,6 +25,7 @@ server.use(cors());
 
 server.use(express.static(path.join(__dirname, "public")));
 // server.name = "API";
+server.use(requestIp.mw())
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "1000mb" }));
 server.use(bodyParser.json({ limit: "1000mb" }));
@@ -49,7 +50,7 @@ server.use((req: Request, res: Response, next: NextFunction) => {
 server.use(session({
   secret: envs.SESION_SECRET,
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
   cookie: { secure: false }
 }));
 
@@ -63,12 +64,11 @@ passport.use(new GoogleStrategy({
   clientSecret: envs.CLIENT_SECRET!,
   callbackURL: "http://localhost:3333/auth/google/callback"
 },
-async (accessToken, refreshToken, profile: Profile, done) => {
-    
+async (accessToken, refreshToken, profile, done) => {
+
   try {
     // Encuentra al usuario basado en su ID de Google
     let user:IUser = await User.findOne({ id: profile.id });
-    
     if (user) {
       return done(null, user);
     }
