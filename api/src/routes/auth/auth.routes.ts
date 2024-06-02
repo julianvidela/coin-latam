@@ -6,7 +6,6 @@ const route: IRouter = Router();
 
 route.get("/auth/google", 
     passport.authenticate("google", { scope: ['email', 'profile'] }), 
-    
 );
 
 route.get("/auth/google/callback",
@@ -33,6 +32,7 @@ route.get(
                 }
                 res.redirect('/');
             });
+            
         });
     }
 );
