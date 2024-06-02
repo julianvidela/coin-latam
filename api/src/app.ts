@@ -11,6 +11,12 @@ const PORT = envs.PORT;
 const connectDB = envs.CONNECTDB;
 
 
+// fetch('https://api.ipify.org?format=json')
+//   .then(respuesta => respuesta.json())
+//   .then(datos => {
+//     console.log('La dirección IP pública del usuario es:', datos.ip);
+//   })
+//   .catch(error => console.error('Error al obtener la dirección IP:', error));
 
 
 //$ SERVER START:
