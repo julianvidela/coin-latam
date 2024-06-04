@@ -84,7 +84,7 @@ const CryptoList = () => {
                         <Accordion
                             expanded={isAccordionExpanded}
                             onChange={(event, expanded) => setIsAccordionExpanded(expanded)}
-                            className="tema-de-acordeon"
+                            className="tema-de-acordeon "
                         >
                             <AccordionSummary>
                                 <h1 className="text-center md:text-left">Top 10 Criptomonedas</h1>
@@ -125,7 +125,7 @@ const CryptoList = () => {
                     <HidenButton onClick={handleStopViewing} />
                 </div>
             )}
-            <div className="w-full md:w-3/4 mx-auto mt-4">
+            <div className="w-full md:w-3/4 mx-auto mt-4 pb-8">
                 {selectedSymbol && chartVisible && <TradingViewChart key={selectedSymbol} symbol={selectedSymbol} />}
             </div>
         </div>
