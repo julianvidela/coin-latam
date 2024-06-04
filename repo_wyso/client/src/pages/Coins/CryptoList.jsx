@@ -8,6 +8,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import GraphicButton from './GraphicButton';
 import HidenButton from './HidenButton';
+import ErrorComponent from './Error.component';
 
 const CryptoList = () => {
     const [cryptos, setCryptos] = useState([]);
@@ -73,7 +74,7 @@ const CryptoList = () => {
     };
 
     if (loading) return <p>Cargando...</p>;
-    if (error) return <p>Error: Demasiadas peticiones, espere un momento.</p>;
+    if (error) return <ErrorComponent />;
 
     return (
         <div className="container mx-auto px-4 lg:px-0 ">
