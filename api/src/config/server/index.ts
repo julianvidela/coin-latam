@@ -20,8 +20,9 @@ import requestIp from 'request-ip';
 
 //% Initial Methods:
 const server: Express = express();
-const routes = Router()
 server.use(cors());
+server.set("trust proxy", true);
+
 
 server.use(express.static(path.join(__dirname, "public")));
 // server.name = "API";
