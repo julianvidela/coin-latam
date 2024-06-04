@@ -4,11 +4,12 @@ import HomeCard from "./pages/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import { BackgroundGradientAnimation } from "./components/ui/background-gradient-animation";
 import About from "./pages/About/About";
+import Background from "./components/ui/background";
 
 function App() {
   return (
     <BrowserRouter>
-      
+       <Background/>
         <NavBar />
         <Routes>
           <Route path="/" element={<HomeCard />} />

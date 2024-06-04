@@ -1,4 +1,3 @@
-// src/components/TradingViewChart.jsx
 import React, { useEffect } from 'react';
 
 const TradingViewChart = ({ symbol }) => {
@@ -42,9 +41,19 @@ const TradingViewChart = ({ symbol }) => {
         };
     }, [symbol]);
 
+    const chartStyle = {
+        width: '100%',
+        height: '750px', // Altura predeterminada
+    };
+
+    // Establecer altura diferente para pantallas pequeñas
+    if (window.innerWidth <= 768) {
+        chartStyle.height = '500px'; // Altura reducida para pantallas pequeñas
+    }
+
     return (
         <div className="tradingview-widget-container">
-            <div id="tradingview_chart" style={{ width: "100%", height: "750px" }}></div>
+            <div id="tradingview_chart" style={chartStyle}></div>
         </div>
     );
 };
