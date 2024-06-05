@@ -1,34 +1,26 @@
 "use client";
 
-
 const Project = ({
-  name = "block name",
+  title = "block name",
   description = "this is good",
-  imgUrl = "/project-1.png",
-  urlLink = "https://www.youtube.com/watch?v=v8zT3O_xsDg&ab_channel=Marendez",
-  gitLink = "https://github.com",
+  imgUrl = "",
 }) => {
   return (
-    <div className="h-[420px] rounded-3xl flex flex-col card-pro p-4 gap-3 justify-between">
-      <div
-        className="w-[500px] h-[220px] rounded-xl flex justify-between bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url('${imgUrl}')` }}
-      ></div>
+    <div className="h-[200px] w-[350px] rounded-3xl flex flex-col card-pro justify-center items-center bg-white relative">
+  <div className="absolute top-[-25px] w-full flex justify-center">
+    <img className="h-14 w-14 object-contain img-shadow" src={imgUrl} alt={title} />
+  </div>
 
-      <div className="h-[110px]">
-        <h2 className="from-neutral-300 text-lg subtitle text-white">
-          {name}
-        </h2>
-        <p className="dark:text-zinc-300 text-sm subtitle text-zinc-400">
-          {description}
-        </p>
-      </div>
-      <div className="flex gap-2 items-end">
-      
+  <div className="flex flex-col gap-2 items-center ">
+    <h2 className=" text-xl subtitle text-white text-center">
+      {title}
+    </h2>
+    <p className=" text-sm subtitle text-zinc-400 text-center">
+      {description}
+    </p>
+  </div>
+</div>
 
-       
-      </div>
-    </div>
   );
 };
 

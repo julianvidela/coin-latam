@@ -1,0 +1,17 @@
+.card-pro {
+    background: radial-gradient(
+      86.88% 75.47% at 50% 24.53%,
+      rgba(56, 16, 129, 0.7),
+      rgba(26, 11, 51, 0.14)
+    );
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset,
+      0px 30px 50px 0px rgba(0, 0, 0, 0.4),
+      0px 4px 24px 0px rgba(51, 3, 129, 0.09),
+      0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  }
+.img-shadow{
+  
+  
+ 
+}  
+  
