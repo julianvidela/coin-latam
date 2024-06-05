@@ -61,9 +61,9 @@ server.use(passport.session());
 
 //Configuracion de estatregia de google
 passport.use(new GoogleStrategy({
-  clientID: envs.CLIENT_ID!,
-  clientSecret: envs.CLIENT_SECRET!,
-  callbackURL: "http://localhost:3333/auth/google/callback"
+  clientID: envs.CLIENT_ID,
+  clientSecret: envs.CLIENT_SECRET,
+  callbackURL: "http://localhost:3000/auth/google/callback"
 },
 async (accessToken, refreshToken, profile, done) => {
 

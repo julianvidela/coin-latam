@@ -1,6 +1,6 @@
 # Proyecto de Backend
 
-Este es un proyecto de backend desarrollado por **Ramiro Lizarraga**, **Walter Oswaldo Quintela Huiza** y **Emanuel Dominguez**.
+Este es un proyecto de backend desarrollado por **Ramiro Lizarraga**.
 
 ---
 
