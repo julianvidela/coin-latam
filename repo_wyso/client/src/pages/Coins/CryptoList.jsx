@@ -83,7 +83,7 @@ const CryptoList = () => {
                             {cryptos.map((crypto) => (
                                 <tr key={crypto.id}>
 
-                                    <td className='flex justify-center mt-'>
+                                    <td className='flex justify-center mt-6'>
                                         <img src={crypto.image} alt={`${crypto.name} icon`} className="w-6 h-6 mr-2" />
                                         <span className="hidden md:table-cell">{crypto.name}</span> ({crypto.symbol.toUpperCase()})
                                     </td>
