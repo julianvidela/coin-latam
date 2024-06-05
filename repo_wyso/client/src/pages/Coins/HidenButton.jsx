@@ -1,4 +1,3 @@
-// DeleteButton.jsx
 
 import React, { useState } from 'react';
 
@@ -21,7 +20,7 @@ const HidenButton = ({ onClick }) => {
             className="noselect"
             style={{
                 width: '150px',
-                height: '50px',
+                height: '35px',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',

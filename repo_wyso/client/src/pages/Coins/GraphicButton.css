@@ -40,7 +40,7 @@
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: greenyellow;
+    background-color: #adff2f;
     border-radius: 50%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -80,15 +80,24 @@
     box-shadow: 0 0 0 4px greenyellow;
   }
   
+  .animated-button svg path {
+    stroke: #adff2f;
+}
+  
   .animated-button:hover .circle {
     width: 220px;
     height: 220px;
     opacity: 1;
   }
   
+
+  
   @media (max-width: 640px) {
     .animated-button .text {
-      display: none;
+      display: none; 
+    }
+    
+    .animated-button {
+      padding: 10px 26px; 
     }
   }
-  

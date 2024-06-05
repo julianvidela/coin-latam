@@ -1,12 +1,3 @@
-.tema-de-acordeon{
-    background-Color: #472d7a53 !important ;
-}
-
-.tema-de-acordeon h1 {
-    font-size: 2.5rem;
-    color: #6927eeb9;
-}
-
 .card {
     width: 250px;
     height: 360px;
@@ -15,4 +6,8 @@
     box-shadow: 15px 15px 30px rgb(47, 2, 51),
                 -15px -15px 30px rgb(60, 60, 60);
    }
+   
+.container {
+    background: rgba(83, 8, 80, 0.176);
+}
    
