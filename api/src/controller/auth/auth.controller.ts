@@ -7,14 +7,15 @@ import { IUser } from "../../database/mongo/model/User.model";
 
 export const ipGet = async (req: Request, res: Response, next: NextFunction) => {
     try {
+        const user = req
+        const ipClient = require
         const apiKey = envs.IPDATA_KEY;
-        const geoInfo = await getGeoInfo(req, apiKey);
+        const geoInfo = await getGeoInfo(user, apiKey);
 
         res.json({
             ip: addressIp(req), // Espera a que getAddressIp() se resuelva
-            geo: geoInfo || 'No se pudo determinar la ubicación de la IP'
+            geo: getGeoInfo || 'No se pudo determinar la ubicación de la IP'
         });
-        next()
 
     } catch (error) {
         throw (error)
@@ -38,16 +39,24 @@ export const unauthorizedGet = (req: Request, res: Response) => {
     res.status(401).send("unauthorized user");
 }
 
-export const secondAuthenticate = () => {
+export const secondAuthenticate = (req:Request, res:Response) => {
+ try {
     passport.authenticate('google', {
         failureRedirect: '/auth/google/unauthorized',
         successRedirect: '/protected',
-    })
+    }) (
+        req, 
+        res.status(200).json({msg: "Logged"}))
+} catch (error) {
+    throw error
+ }
 }
 
-export const firstAuthenticate =  () => {
-    passport.authenticate("google", { scope: ['email', 'profile'] })
+export const firstAuthenticate =  (req:Request, res:Response, next:NextFunction) => {
+    passport.authenticate("google", { scope: ['email', 'profile'] })(req, res, next())
 }  
+
+
 
 export const isLoggedGet =  async(req: Request, res: Response) => {
     const user = req.user as IUser; // Hacemos una conversión de tipo
@@ -61,5 +70,5 @@ export const isLoggedGet =  async(req: Request, res: Response) => {
       <h1>Hello ${user.displayName}</h1>
       <h4>Your email: ${user.emails[0].value}</h4>
       <a href="/logout">Logout</a>
-    `);
-  }
+    `)
+}
