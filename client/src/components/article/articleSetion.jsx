@@ -2,29 +2,28 @@ import Card from "./cardsData";
 import ".//article.css"
 
 const ArticleSection = () => {
-    return ( <main className="h-[35rem] w-full flex flex-col items-center justify-center gap-24 pt-8">
-        <div className="text-white flex flex-col items-center gap-2 ">
-            <p className="text-[30px]">👨🏻‍🚀</p>
-            <h2 className="text-[35px] text-[var(--color-text-blue)] font-light">Informacion al momento</h2>
-            <p className="text-[var(--color-text-gray)] text-[17px]">Todos los datos de las criptos mas importantes del momento</p>
+    return ( <main className="h-[50rem] md:h-[30rem] lg:h-[35rem] w-full flex flex-col items-center justify-center gap-10 z-1">
+        <div className="text-white flex flex-col items-center gap-1 text-center ">
+            <h2 className="text-[20px] md:text-[30px] text-[#ADA5FF] font-light">Informacion al momento</h2>
+            <p className="text-[var(--color-text-gray)] text-[14px] md:text-[16px] w-[70%]">Todos los datos de las criptos mas importantes del momento</p>
 
         </div>
-        <section className="flex gap-5 justify-center">
+        <section className="flex flex-col md:flex md:flex-row gap-2 md:gap-2 justify-center">
 
         <Card
         title="Rapidez"
         description="Las transaccaciones son inmediatas!"
-        imgUrl="/reloj.png"
+        imgUrl="/reloj.svg"
         />
         <Card
-        title="+10% Iniversion Anual"
+        title="+10% Inversion Anual"
         description="Las transaccaciones son inmediatas!"
-        imgUrl="/casita.png"
+        imgUrl="/inversion.svg"
         />
         <Card
         title="Devolucion Automatica"
         description="Las transaccaciones son inmediatas!"
-        imgUrl="/devolucion.png"
+        imgUrl="/devolucion.svg"
         />
         </section>
 

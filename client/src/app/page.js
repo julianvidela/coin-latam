@@ -1,20 +1,22 @@
 
+import NavBar from "@/components/navbar/navbar";
 import HomeComponent from "../components/home/home";
-import NavBar from "../components/navbar/navbar";
+import Footer from "@/components/footer/footer";
+
 
 
 export default function Home() {
   return (
-   <main className="gradient">
-    <section className="h-screen m-auto max-w-[90%] w-[1200px]">
+    <main className="">
+      <section className="h-full m-auto max-w-[94%] w-[1200px]">
 
-    <NavBar/>
-    <HomeComponent/>
+     <NavBar/>
+     <HomeComponent/>
+     <Footer/>
     
-    
-    
-    </section>
 
-   </main>
+      
+      </section>
+    </main>
   );
 }

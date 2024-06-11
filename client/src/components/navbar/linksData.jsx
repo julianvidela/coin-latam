@@ -1,14 +1,14 @@
 export const links = [
     {
-        title: "best coins",
+        title: "home",
         to: "Home"
     },
     {
-        title: "graphics",
+        title: "coins",
         to: "About"
     },
     {
-        title: "but / sell",
+        title: "about",
         to: "Stack"
     },
     {
