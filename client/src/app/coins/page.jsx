@@ -8,9 +8,11 @@ function Coins() {
     <>
       <section className="h-full m-auto max-w-[94%] w-[1200px]">
         <NavBar />
-      </section>
+
         <CryptoList />
+
         <Footer />
+      </section>
     </>
   );
 }

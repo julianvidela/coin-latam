@@ -16,25 +16,25 @@ const NavBar = () => {
             href="/"
             className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
           >
-            Home
+            home
           </Link>
           <Link
             href="/coins"
             className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
           >
-            Coins
+            coins
           </Link>
           <Link
             href="/about"
             className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
           >
-            About Us
+            about us
           </Link>
           <Link
             href="/legal"
             className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
           >
-            Legal Terms
+            legal Terms
           </Link>
         </div>
         <div className="flex items-center gap-5 text-white">
