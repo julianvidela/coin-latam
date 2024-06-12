@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { links } from "./linksData";
 import NavbarMovile from "./navmobile/navbarMobile";
 import "./navbar.css";
 
@@ -13,15 +12,30 @@ const NavBar = () => {
         </div>
 
         <div className="flex items-center gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.title}
-              className="text-[14px] text-[#B0B0B0] hover:text-white"
-              href={link.to}
-            >
-              {link.title}
-            </Link>
-          ))}
+          <Link
+            href="/"
+            className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
+          >
+            Home
+          </Link>
+          <Link
+            href="/coins"
+            className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
+          >
+            Coins
+          </Link>
+          <Link
+            href="/about"
+            className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/legal"
+            className="menu__link text-[14px] text-[#B0B0B0] hover:text-white"
+          >
+            Legal Terms
+          </Link>
         </div>
         <div className="flex items-center gap-5 text-white">
           <Link href="" className="text-[#B0B0B0] text-[14px]">

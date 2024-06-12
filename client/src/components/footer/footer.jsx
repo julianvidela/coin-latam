@@ -10,16 +10,14 @@ const Footer = () => {
         <section className="w-full flex justify-center ">
           <div className=" flex flex-col text-left gap-5 ">
             <h2 className="text-[15px] text-[#ADA5FF]">Empresa</h2>
-            {links.map((link,index) => (
-              <>
-                <Link
-                 key={index}
-                  className="text-[14px] text-[var(--color-text-gray)]  hover:text-white"
-                  href={link.to}
-                >
-                  {link.title}
-                </Link>
-              </>
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                className="text-[14px] text-[var(--color-text-gray)]  hover:text-white"
+                href={link.to}
+              >
+                {link.title}
+              </Link>
             ))}
           </div>
         </section>
@@ -36,7 +34,7 @@ const Footer = () => {
               <a href="">
                 <img
                   src="/playstore.webp"
-                  alt="apple store logo"
+                  alt="play store logo"
                   className="h-[40px] w-auto"
                 />
               </a>
@@ -44,9 +42,9 @@ const Footer = () => {
           </div>
         </section>
       </section>
-        <div className="text-[14px] text-[var(--color-text-gray)] text-center mt-5 ">
-          <p>© 2024 Coin latam</p>
-        </div>
+      <div className="text-[14px] text-[var(--color-text-gray)] text-center mt-5 ">
+        <p>© 2024 Coin latam</p>
+      </div>
     </footer>
   );
 };
