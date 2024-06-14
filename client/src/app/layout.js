@@ -46,7 +46,8 @@ export default function RootLayout({ children }) {
         <div style={{ display: loading ? "none" : "block" }}>
           <Providers>
             <Background />
-            <NavBar />
+            <NavBar/>
+          
             {children}
           </Providers>
         </div>

@@ -1,8 +1,7 @@
 
-import { LoginNavBar } from "@/components/login/LoginNavBar";
 import HomeComponent from "../components/home/home";
 import Footer from "@/components/footer/footer";
-import Profile from "@/components/navbar/profile/profile";
+
 
 export default function Home() {
   return (
