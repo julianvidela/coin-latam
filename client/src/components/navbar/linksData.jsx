@@ -1,18 +1,18 @@
 export const links = [
     {
-      title: "home",
-      to: "/"
+        title: "home",
+        to: "/"
     },
     {
-      title: "coins",
-      to: "/coins"
+        title: "coins",
+        to: "/pages/coins"
     },
     {
-      title: "about Us",
-      to: "/about"
+        title: "about",
+        to: "/pages/about"
     },
     {
-      title: "legal Terms",
-      to: "/legal"
-    }
-  ];
+        title: "legal terms",
+        to: "/pages/legalterms"
+    },
+]

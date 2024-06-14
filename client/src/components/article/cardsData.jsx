@@ -6,7 +6,7 @@ const Project = ({
   imgUrl = "",
 }) => {
   return (
-    <div className="h-[150px] w-[350px] md:w-[240px] md:h-[180px] lg:w-[320px] xl:w-[370px] rounded-3xl flex flex-col card-pro justify-start items-center bg-white  p-4">
+    <div className="h-[150px] w-[350px] md:w-[240px] md:h-[170px] lg:w-[320px] xl:w-[370px] rounded-3xl flex flex-col card-pro justify-start items-center bg-white  p-4">
       <div className=" w-full flex justify-center">
         <img
           className="h-14 w-14 object-contain img-shadow scale-75"

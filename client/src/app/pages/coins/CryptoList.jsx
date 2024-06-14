@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import TradingViewChart from '../../components/graphic/TradingViewChart';
+import TradingViewChart from '../../../components/graphic/TradingViewChart';
 import GraphicButton from './GraphicButton';
 import HidenButton from './HidenButton';
 import ErrorComponent from './Error.component';

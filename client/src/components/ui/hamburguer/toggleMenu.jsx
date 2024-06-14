@@ -1,16 +1,31 @@
 import "./toggleMenu.css"
+import { useState } from "react";
 
-const toggleMenu = () => {
+const BurgerMenu = ({ toggle }) => {
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = () => {
+    setChecked(!checked);
+    toggle(); 
+  };
+
   return (
-    <>
-      <input id="checkbox2" type="checkbox" />
-      <label className="toggle toggle2" htmlFor="checkbox2">
-        <div id="bar4" className="bars"></div>
-        <div id="bar5" className="bars"></div>
-        <div id="bar6" className="bars"></div>
+    <div className="">
+
+      <label className="burger" htmlFor="burger">
+        <input
+          type="checkbox"
+          id="burger"
+          checked={checked}
+          onChange={handleChange}
+          
+        />
+        <span></span>
+        <span></span>
+        <span></span>
       </label>
-    </>
-  );
+    </div>
+    );
 };
 
-export default toggleMenu;
+export default BurgerMenu;
