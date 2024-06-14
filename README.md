@@ -1,6 +1,7 @@
 # CoinLatam
 ![logo](https://github.com/julianvidela/coin-latam/assets/105290418/893826ac-3f04-48aa-87eb-e8f4d327d02e)
-https://github.com/julianvidela/coin-latam/assets/105290418/cb15556c-dc1d-45e6-9bd8-b56be9030e62
+![2024-06-14-01-18-50](https://github.com/julianvidela/coin-latam/assets/105290418/5e819f01-f078-41da-80dd-d4d951d9fc05)
+
 
 # Join our page: Our quotations are on fire!🔥
 Coin Latam is a real-time cryptocurrency reference site.
