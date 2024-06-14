@@ -1,12 +1,14 @@
-import AboutSection from "./aboutSection";
+import TimelineSection from "./components/TimelineSection";
+
 
 const about = () => {
-    return ( 
+    return (
         <section className="h-full m-auto max-w-[94%] w-[1200px]">
-            <AboutSection/>
+
+            <TimelineSection />
 
         </section>
-     );
+    );
 }
- 
+
 export default about;
