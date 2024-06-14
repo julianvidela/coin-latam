@@ -3,6 +3,7 @@ import "./globals.css";
 import Background from "@/components/ui/backGround";
 import NavBar from "@/components/navbar/navbar";
 import { Providers } from "./Providers";
+import { Loader } from "@/components/ui/laoder/loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        
+        {/* //aplicar loader */}
+        {/* <Loader />  */}
         <Providers>
           <Background />
           <NavBar />

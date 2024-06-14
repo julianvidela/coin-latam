@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Head = ({ _css, children }) => {
+export const Head = ({ _css, children }) => {
     return (
         <div className={_css.robot_head}>
             {children}
@@ -8,4 +8,3 @@ const Head = ({ _css, children }) => {
     );
 };
 
-export default Head;

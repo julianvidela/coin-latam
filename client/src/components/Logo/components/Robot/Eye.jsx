@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Eye = ({ _css }) => {
+export const Eye = ({ _css }) => {
     return (
         <div className={_css.eye}>
             <div className={_css.closed} />
@@ -9,5 +9,3 @@ const Eye = ({ _css }) => {
         </div>
     );
 };
-
-export default Eye;
