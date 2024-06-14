@@ -1,0 +1,27 @@
+.profile_img_wrap {
+    z-index: 445;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.profile_img_wrap img {
+    width: 28px;
+    border-radius: 50%;
+    height: auto;
+}
+
+.profile_img_wrap img:hover {
+    cursor: pointer;
+}
+
+
+
+.profile_img_wrap:hover {
+    background-color: #8a8a8a27;
+}

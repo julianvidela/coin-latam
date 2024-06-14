@@ -1,21 +1,20 @@
 "use client";
+
 import FlagAndCurrency from "@/components/ui/flagcurrency/flagComponent";
 import "./profile.css";
 import { signIn, useSession, signOut } from "next-auth/react";
+import css from "./profile.module.css";
+
 const Profile = () => {
   const { data: session } = useSession();
   return (
     <div className="">
       {session?.user ? (
         <ul className="navigation hide">
-          <li className="">
-           
-              <img
-                src={session.user.image}
-                alt="user avatar"
-                className="w-6 h-6 md:w-7 md:h-7 rounded-full"
-              />
-         
+          <li>
+            <div className={css.profile_img_wrap}>
+              <img src={session.user.image} alt="user avatar" />
+            </div>
 
             <div className="dropdown__wrapper">
               <div className="dropdown">
@@ -23,9 +22,8 @@ const Profile = () => {
                   <li>
                     <div className="item-title flex flex-col gap-2 items-start p-2">
                       <div className="flex gap-2 items-center">
-                      <h3 className="text-[12px]">{session.user.name}</h3>
-                      <FlagAndCurrency/>
-
+                        <h3 className="text-[12px]">{session.user.name}</h3>
+                        <FlagAndCurrency />
                       </div>
                       <p>{session.user.email}</p>
                       <button

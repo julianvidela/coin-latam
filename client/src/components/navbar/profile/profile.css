@@ -1,200 +1,179 @@
-
-
-
 :root {
-    --primary: #000000;
-    --background: #000000;
-    --secondary-bg: #0A0A0A;
-    --secondary-border: #242424;
-    --secondary-bg-hover: #1F1F1F;
-    --gray: #847F90;
-    --gray-hover: #171717;
-    --primary-hover: #555555;
-    --link-gray: #9B9B9B;
-    --navigation-bg: #020202;
-    --link-gray-hover: #1F1F1F;
-    --gray: #E1E1E1;
-    --gray-border: #2E2E2E;
-    --dropdown-bg: #010101;
-    --tab-bg: #1F1F1F;
-    --white: #FCFCFC;
-    --navbar-height: 64px;
-    --primary-bg: #EDEDED;
-    --primary-bg-hover: #CCCCCC;
-    --primary-text: #0E0E0E;
+  --primary: #000000;
+  --background: #000000;
+  --secondary-bg: #0a0a0a;
+  --secondary-border: #242424;
+  --secondary-bg-hover: #1f1f1f;
+  --gray: #847f90;
+  --gray-hover: #171717;
+  --primary-hover: #555555;
+  --link-gray: #9b9b9b;
+  --navigation-bg: #020202;
+  --link-gray-hover: #1f1f1f;
+  --gray: #e1e1e1;
+  --gray-border: #2e2e2e;
+  --dropdown-bg: #010101;
+  --tab-bg: #1f1f1f;
+  --white: #fcfcfc;
+  --navbar-height: 64px;
+  --primary-bg: #ededed;
+  --primary-bg-hover: #cccccc;
+  --primary-text: #0e0e0e;
 }
 
 body {
-    font-family: 'Open Sans', 
-    sans-serif;
-    font-size: 16px;
-    background: var(--background);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: var(--background);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .menu__wrapper {
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    width: 100vw;
-    z-index: 2;
-    gap: 1.5rem;
-    background: var(--background);
-    height: var(--navbar-height);
-    padding: 0 1rem;
-    align-items: center;
-    box-shadow: 0 1px 0 0 
-        rgba(0, 0, 0, .1);
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100vw;
+  z-index: 2;
+  gap: 1.5rem;
+  background: var(--background);
+  height: var(--navbar-height);
+  padding: 0 1rem;
+  align-items: center;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu__bar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-
 
 .navigation {
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    align-items: center;
-    gap: 1rem;
-    
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  gap: 1rem;
 }
 
-.navigation>li {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    align-items: center;
-    min-height: 2.25rem;
+.navigation > li {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  min-height: 2.25rem;
 }
 
-.navigation>li>a {
-    color: var(--link-gray);
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.navigation > li > a {
+  color: var(--link-gray);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.navigation>li>a:hover {
-    color: var(--white);
+.navigation > li > a:hover {
+  color: var(--white);
 }
 
-
-
-
-.navigation>li:hover .dropdown, 
-.navigation>li:focus-within .dropdown {
-    display: block;
+.navigation > li:hover .dropdown,
+.navigation > li:focus-within .dropdown {
+  display: block;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.99) 
-        translateY(-0.7em);
-        transform-origin: top;
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.99) translateY(-0.7em);
+    transform-origin: top;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .dropdown__wrapper {
-    position: absolute;
-    top: 0;
-    
-    right:-60% ;
-    padding-top: 3.75rem;
+  position: absolute;
+  top: 0;
+
+  right: -60%;
+  padding-top: 3.75rem;
 }
 
 .dropdown {
-    border-radius: 0.5rem;
-    background: var(--dropdown-bg);
-    display: none;
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 36rem;
-    border: 1px solid var(--gray-border);
-    z-index: 2;
-    animation: fadeIn 0.2s ease-in-out;
+  border-radius: 0.5rem;
+  background: var(--dropdown-bg);
+  display: none;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 36rem;
+  border: 1px solid var(--gray-border);
+  z-index: 2;
+  animation: fadeIn 0.2s ease-in-out;
 }
-
-
-
 
 .list-items-with-description li svg {
-    stroke: var(--white);
-    stroke-width: 1px;
-    width: 1.5rem;
-    height: 1.5rem;
+  stroke: var(--white);
+  stroke-width: 1px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-
-
 .item-title p {
-    font-size: 0.7rem;
-    white-space: nowrap;
-    color: var(--link-gray);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: var(--link-gray);
 }
 
 .list-items-with-description li:hover p {
-    color: var(--white);
+  color: var(--white);
 }
 
-
-
 .secondary {
-    background: none;
-    color: var(--primary-bg);
-    outline: none;
-    border: 1px solid var(--gray-border);
-    border-radius: 6px;
+  background: none;
+  color: var(--primary-bg);
+  outline: none;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
 }
 
 .secondary:hover {
-    background: var(--secondary-bg-hover);
+  background: var(--secondary-bg-hover);
 }
 
 .primary {
-    color: var(--primary-text);
-    border-radius: 6px;
-    background: var(--primary-bg);
-    padding: 0.5rem 1rem;
+  color: var(--primary-text);
+  border-radius: 6px;
+  background: var(--primary-bg);
+  padding: 0.5rem 1rem;
 }
 
 .primary:hover {
-    background: var(
-        --primary-bg-hover
-    );
+  background: var(--primary-bg-hover);
 }
 
 .burger-menu {
-    display: none;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: transparent;
+  display: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.profile_img_container img:hover + .profile_img_container .hover_anim{
+    background-color: #ffffff;
 }
 
 
 
-@media (min-width: 1024px) {
-    .lg\: {
-      /* Estilos para pantallas grandes */
-    }
-  }
