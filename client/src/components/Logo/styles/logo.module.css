@@ -1,0 +1,208 @@
+.container {
+    position: relative;
+
+    width: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    animation: showing .5s ease-in-out;
+}
+
+.robot_container {
+    position: relative;
+    width: var(--robot-size);
+    aspect-ratio: 6/4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 11%;
+    background-color: var(--robot-bg-color);
+    border: var(--robot--border-size) solid var(--robot-primary-color);
+
+    box-shadow: 0 0 3px 2px var(--robot-brightness-color);
+    animation: shadowPulse var(--robot-shadow-pulse) infinite linear;
+}
+
+.robot_head {
+    height: calc(100% - var(--robot-border-spacing));
+    width: calc(100% - var(--robot-border-spacing));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 9%;
+    border: var(--robot--border-size) solid var(--robot-primary-color);
+
+}
+
+.eyes_wrapper {
+    z-index: 2;
+    height: 50px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+
+}
+
+.eyes_wrapper .eye {
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+
+    width: 23%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    border: 2px solid var(--robot-primary-color);
+}
+
+.eyes_wrapper .eye .spark {
+    z-index: 4;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+
+    width: 42%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    background-color: var(--robot-secondary-color);
+}
+
+.eyes_wrapper .eye .small_spark {
+    z-index: 4;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+
+    width: 18%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    background-color: var(--robot-secondary-color);
+}
+
+.eyes_wrapper .closed {
+    position: absolute;
+    z-index: 10;
+
+    width: 100%;
+    height: 0;
+
+    background: linear-gradient(180deg, var(--robot-primary-color), var(--robot-primary-color-strong));
+
+    animation: closeEyes var(--robot-close-eyes) infinite ease-in-out;
+
+}
+
+.loading_bar {
+
+    position: absolute;
+    bottom: -35%;
+
+    width: calc(var(--robot-size) - 20%);
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.loading_bar .circle {
+
+    height: 100%;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    border: var(--robot--loading-border-size) solid var(--robot-primary-color);
+    background-color: var(--robot-bg-color);
+    opacity: 0;
+    animation: opacityPulse var(--robot-opacity-pulse) infinite
+}
+
+.loading_bar .c1 {
+    animation-delay: var(--robot-loading-delay);
+}
+
+.loading_bar .c2 {
+    animation-delay: calc(var(--robot-loading-delay) *2);
+}
+
+.loading_bar .c3 {
+    animation-delay: calc(var(--robot-loading-delay) *3);
+}
+
+.loading_bar .c4 {
+    animation-delay: calc(var(--robot-loading-delay) *4);
+}
+
+/** Animations */
+
+
+@keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityPulse {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes closeEyes {
+    0% {
+        height: 0%;
+    }
+
+    40% {
+        height: 20%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 2px 2px var(--robot-brightness-color);
+    }
+
+    50% {
+        box-shadow: 0 0 3px 10px var(--robot-brightness-color);
+    }
+
+    100% {
+        box-shadow: 0 0 2px 2px var(--robot-brightness-color);
+    }
+}

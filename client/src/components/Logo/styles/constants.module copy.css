@@ -1,0 +1,22 @@
+.constants {
+
+    /** colors:  */
+
+    --robot-primary-color: #3D2C7F;
+    --robot-primary-color-strong: #4a2fb8;
+    --robot-secondary-color: #B6B6B6;
+    --robot-bg-color: #101010;
+    --robot-brightness-color: #3d2c7f57;
+
+    /** sizes:  */
+    --robot--border-size: 1px;
+    --robot--loading-border-size: 1px;
+    --robot-border-spacing: 6px;
+    --robot-size: 140px;
+
+    /** animations:  */
+    --robot-opacity-pulse: 1s;
+    --robot-close-eyes: 4s;
+    --robot-shadow-pulse: 4s;
+    --robot-loading-delay: 0.01s;
+}

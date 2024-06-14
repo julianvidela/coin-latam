@@ -1,17 +1,14 @@
 import Spline from "@splinetool/react-spline"
+import Timeline from "./components/timeline";
 
 
 
 const aboutSection = () => {
     return ( <section>
         <div className="mt-10">
+          <Timeline/>
 
-          <Spline
-    
-        scene="" 
-        width={550}
-        height={550}
-      />
+       
         </div>
         
     </section> );
