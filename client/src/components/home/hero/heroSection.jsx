@@ -1,8 +1,20 @@
-"use client";
-
+import React, { useEffect, useState } from 'react';
 import Spline from "@splinetool/react-spline";
 
-const hero = () => {
+const Hero = () => {
+  const [splineUrl, setSplineUrl] = useState('');
+
+  useEffect(() => {
+    const url = localStorage.getItem('splineUrl');
+    if (url) {
+      setSplineUrl(url);
+    } else {
+      const newUrl = "https://prod.spline.design/uPLo2O4YCHePSH-k/scene.splinecode";
+      localStorage.setItem('splineUrl', newUrl);
+      setSplineUrl(newUrl);
+    }
+  }, []);
+
   return (
     <main className="h-[35rem] md:h-[60rem] lg:h-[35rem] w-full justify-center m-auto mt-4 flex flex-col lg:flex-row items-center gap-16 md:gap-6 lg:gap-1">
       <section className="h-[20rem] lg:h-[30rem] w-full flex flex-col bg-[rgba(17, 17, 17, 0.8)] rounded-xl lg:gap-2 p-8 ">
@@ -22,10 +34,10 @@ const hero = () => {
       </section>
 
       <div className="hidden h-[35rem] md:flex md:items-center lg:pt-14">
-        <Spline scene="https://prod.spline.design/uPLo2O4YCHePSH-k/scene.splinecode" />
+        {splineUrl && <Spline scene={splineUrl} />}
       </div>
     </main>
   );
 };
 
-export default hero;
+export default Hero;

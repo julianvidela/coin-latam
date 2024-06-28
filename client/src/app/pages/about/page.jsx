@@ -1,20 +1,24 @@
 import TimelineSection from "./components/timeline/TimelineSection";
-import ArticleSection from "./components/article/articleSection";
+import Card from "./components/article/articleSection";
 import Footer from "@/components/footer/footer";
-import AboutSection from "./components/about/aboutSection";
+import AboutSection from "./components/hero/aboutSection";
+import ArticleSection from "@/components/article/articleSetion";
+import Integrantes from "./components/integrantes/integrantesSection"
+
+
 const about = () => {
-    return (
-        <section className="h-full m-auto max-w-[94%] w-[1200px]">
-            <AboutSection/>
+  return (
+    <section className="h-full m-auto max-w-[94%] w-[1200px] flex flex-col gap-10">
+      <AboutSection />
+      
+      <Card />
+      <TimelineSection />
 
-            <ArticleSection/>
-            <TimelineSection/>
-            <Footer/>
+      <Integrantes/>
 
-           
-
-        </section>
-    );
-}
+      <Footer />
+    </section>
+  );
+};
 
 export default about;

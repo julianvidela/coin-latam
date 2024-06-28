@@ -6,7 +6,7 @@ import FlagAndCurrency from "../ui/flagcurrency/flagComponent";
 
 const Footer = () => {
   return (
-    <footer className="bg-transparent border-footer h-[8rem] flex justify-around flex-col mt-4">
+    <footer className="bg-transparent border-footer h-[8rem] flex justify-around flex-col mt-4 mb-10">
       <section className="flex">
         <section className="w-full flex justify-center">
           <div className="flex text-left gap-5">

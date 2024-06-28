@@ -1,30 +1,18 @@
 
 
-const articleSection = () => {
+
+
+const card = () => {
   return (
-    <section className="h-[35rem] md:h-[15rem] flex flex-col justify-center mt-10">
-      <div className="flex flex-col w-full h-[30rem] items-center justify-center md:flex-row gap-1  text-white text-center ">
-        <div className=" h-[180px] w-full rounded-lg p-3 flex flex-col justify-center md:items-center  gap-2 card-pro">
-          <h3 className="text-[20px] font-semibold">Educacion</h3>
-          <p className="text-[16px]  text-zinc-400">
-            Brindar información básica para que todos puedan acceder.
-          </p>
+    <section className=" h-auto w-full border-info-mercado bg-white rounded-xl flex flex-col items-center justify-center mb-4">
+      <section className="h-[350px] md:h-[300px] lg:h-[250px] flex items-center w-full p-4">
+        <div className="w-full md:w-[65%] lg:w-[55%] h-full m-auto flex flex-col justify-center items-center gap-6 md:gap-4">
+          <h2 className="text-[var(--color-text-black-gray)] font-bold w-full text-[20px] uppercase">
+            sumate a coin latam y explora el mundo cripto y su futuro en el mundo real financiero
+          </h2>
         </div>
-        <div className="h-[180px] w-full rounded-lg p-3 flex flex-col justify-center  md:items-center gap-2  card-pro ">
-          <h3 className="text-[20px] font-semibold">Acceso</h3>
-          <p className="text-[16px] text-zinc-400 ">
-            Simplificamos el universo cripto con contenido claro y accesible.
-          </p>
-        </div>
-        <div className=" h-[180px] w-full rounded-lg p-3 flex flex-col justify-center  md:items-center gap-2  card-pro">
-          <h3 className="text-[20px]  font-semibold">Innovacion</h3>
-          <p className="text-[16px] text-zinc-300 ">
-            Comprometidos con la innovacion y la busqueda de soluciones.
-          </p>
-        </div>
-      </div>
+      </section>
     </section>
   );
 };
-
-export default articleSection;
+export default card;

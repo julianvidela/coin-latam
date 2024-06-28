@@ -1,8 +1,8 @@
 .fondoIcono{
-    background-color: black !important;
+    background-color: transparent !important;
     border: 2px solid !important; 
-    border-color: #9c27b0 !important
+    border-color:var(--color-text-gray);
 }
 .lineaVioleta{
-    background-color: #9c27b0 !important
+    background-color: var( --color-text-gray);
 }

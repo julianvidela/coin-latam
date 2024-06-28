@@ -1,6 +1,6 @@
 "use client";
 
-const Project = ({
+const CardData = ({
   title = "block name",
   description = "this is good",
   imgUrl = "",
@@ -27,4 +27,4 @@ const Project = ({
   );
 };
 
-export default Project;
+export default CardData;

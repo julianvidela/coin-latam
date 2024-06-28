@@ -8,7 +8,7 @@ import css from "./profile.module.css";
 const Profile = () => {
   const { data: session } = useSession();
   return (
-    <div className="">
+    <div className="w-full flex justify-start">
       {session?.user ? (
         <ul className="navigation hide">
           <li>
@@ -16,18 +16,18 @@ const Profile = () => {
               <img src={session.user.image} alt="user avatar" />
             </div>
 
-            <div className="dropdown__wrapper">
-              <div className="dropdown">
+            <div className= " dropdown__wrapper lg:dropdown__wrapper">
+              <div className=" dropdown  lg:dropdown">
                 <ul className="list-items-with-description">
                   <li>
-                    <div className="item-title flex flex-col gap-2 items-start p-2">
-                      <div className="flex gap-2 items-center">
+                    <div className="flex flex-col gap-1 items-start lg:item-title p-2">
+                      <div className="flex gap-3 items-center">
                         <h3 className="text-[12px]">{session.user.name}</h3>
                         <FlagAndCurrency />
                       </div>
-                      <p>{session.user.email}</p>
+                      <p className="text-[13px]">{session.user.email}</p>
                       <button
-                        className="text-white text-[14px]"
+                        className="text-[var(--color-text-gray)] text-[14px]"
                         onClick={async () => {
                           await signOut({
                             callbackUrl: "/",
