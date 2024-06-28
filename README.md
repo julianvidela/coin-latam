@@ -74,3 +74,4 @@ Remember, you need to have Node.js and npm installed on your system to perform t
 # Online Deployment
 You can also access the backend online at `https://test-ip-rose.vercel.app/`
 # Team behind the project
+![about](https://github.com/julianvidela/coin-latam/assets/105290418/738b6fd9-048f-4bfb-a54f-19a16ee77906)
